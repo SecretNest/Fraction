@@ -1,6 +1,8 @@
 # Fraction
 Add fraction support.
 
+Supported platform: NetCore 1, NetCore 2, NetFx 4, NetStd 1.3, NetStd 2.0
+
 # Known Issue
 Using an instance built by default parameterless constructor will cause exception or miscalculation. To avoid this, always use parameter-based constructors. This will not be fixed due to consideration about running speed.
 
