@@ -19,6 +19,7 @@ namespace SecretNest
                 //Fast mode
                 //(a+b/c)(d+e/f) = (ac+b)*(df+e)/cf
                 ulong numerator = checked((value1.integer * value1.denominator + value1.numerator) * (value2.integer * value2.denominator + value2.numerator)); //overflow possibility
+                value1.integer = 0;
                 value1.numerator = numerator;
                 value1.denominator *= value2.denominator;
                 value1.Simplify();
@@ -132,6 +133,7 @@ namespace SecretNest
                 //overflow possibility
                 ulong denominator = checked((value2.integer * value2.denominator + value2.numerator) * value1.denominator);
                 //overflow possibility
+                value1.integer = 0;
                 value1.numerator = numerator;
                 value1.denominator = denominator;
                 value1.Simplify();

@@ -67,7 +67,7 @@ namespace SecretNest
                     if (texts.Length == 2)  // x y/z
                     {
                         if (!ulong.TryParse(texts[0], out integer))
-                            throw new ArgumentException(text, "The text format cannot be recongized.");
+                            throw new ArgumentException(text, "The text format cannot be recognized.");
                         text = texts[1];
                     }
                     else
@@ -76,14 +76,14 @@ namespace SecretNest
                     }
                     texts = text.Split('/');  //  y/z
                     if (texts.Length != 2)
-                        throw new ArgumentException(text, "The text format cannot be recongized.");
+                        throw new ArgumentException(text, "The text format cannot be recognized.");
                     if (!ulong.TryParse(texts[0], out numerator))
-                        throw new ArgumentException(text, "The text format cannot be recongized.");
+                        throw new ArgumentException(text, "The text format cannot be recognized.");
                     if (!ulong.TryParse(texts[1], out denominator))
-                        throw new ArgumentException(text, "The text format cannot be recongized.");
+                        throw new ArgumentException(text, "The text format cannot be recognized.");
                 }
                 else
-                    throw new ArgumentException(text, "The text format cannot be recongized.");
+                    throw new ArgumentException(text, "The text format cannot be recognized.");
             }
             Simplify();
             if (IsZero) sign = 1;
